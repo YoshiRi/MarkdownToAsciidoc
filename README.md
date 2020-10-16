@@ -1,7 +1,9 @@
 # MarkdownToAsciidoc
-Test project for markdown to asciidoc conversion
+Test project for markdown to asciidoc conversion.
 
-Also see [Here](https://matthewsetter.com/technical-documentation/asciidoc/convert-markdown-to-asciidoc-with-kramdoc/).
+マークダウンをAsciidocに変換するにはPandocではなくDocker-AsciidoctorにあるKramdocを使うと良いということを示す。
+
+Kramdocについてはsee [Here](https://matthewsetter.com/technical-documentation/asciidoc/convert-markdown-to-asciidoc-with-kramdoc/).
 
 ## Sample markdown
 
@@ -36,6 +38,7 @@ wsl docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciido
 
 # Known Problems
 
+試して判明したエラーや知見など。
 
 ## PHPのシンタックスハイライトをつけようとするとエラーが出る
 
