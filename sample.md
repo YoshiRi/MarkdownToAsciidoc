@@ -2,13 +2,7 @@ Markdown記法サンプル
 
 # 見出し1（h1）
 
-見出し1（h1）
-=============
-
 ## 見出し2（h2)
-
-見出し2（h2）
--------------
 
 ### 見出し3
 
@@ -144,7 +138,10 @@ markdownでテキストリンク [WIRED.jp](http://wired.jp/ "WIRED.jp")
   [2]: https://ja-jp.facebook.com/  "Facebook"
   [3]: https://plus.google.com/    "Google+"
 
+
+
 ## 画像
+![うきっ！](http://mkb.salchu.net/image/salchu_image02.jpg "salchu_image02.jpg")
 
 
 ## table
@@ -172,6 +169,8 @@ URLそのまま貼り付け http://wired.jp/
 ↑returnで改行しています。
 ♪もーもたろさん もーもたーろさん おっこしーにつっけたーちー○○ー○○ー
 
+
+
 ## コードブロック
 
 バッククォートの開始囲みに続けて拡張子でシンタックスハイライト
@@ -186,10 +185,6 @@ URLそのまま貼り付け http://wired.jp/
 
 ```css
 body { display: none; } /* コメント */
-```
-
-```php
-<?php if (is_tag()){ $posts = query_posts($query_string . '&showposts=20'); } ?>
 ```
 
 ## 取り消し線

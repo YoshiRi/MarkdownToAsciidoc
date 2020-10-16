@@ -12,7 +12,6 @@ Downloaded from `https://www.dropbox.com/s/4z6kot27jmikhx5/forapp-markdown-sampl
 ## Pandoc Command
 
 
-
 ```
 pandoc -o sample_pandoc.adoc sample.md
 ```
@@ -37,12 +36,24 @@ wsl docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciido
 
 # Known Problems
 
-- 画像貼り付けが怪しい？
-- ![うきっ！](http://mkb.salchu.net/image/salchu_image02.jpg "salchu_image02.jpg")
 
-エラーが出る…
+## PHPのシンタックスハイライトをつけようとするとエラーが出る
+
+xmlのコメントを変換する機能でエラーがでる。
 
 ```
 /usr/lib/ruby/gems/2.7.0/gems/kramdown-asciidoc-1.0.1/lib/kramdown-asciidoc/converter.rb:99:in `convert': undefined method `convert_xml_pi' for #<Kramdown::AsciiDoc::Converter:0x0000561a13adec28> (NoMethodError)
 Did you mean?  convert_li
 ```
+
+以下が原因となった部分
+
+```php
+<?php if (is_tag()){ $posts = query_posts($query_string . '&showposts=20'); } ?>
+```
+
+バージョンによっては改善しているかもしれない。
+
+## リンク以降の改行がおかしい
+
+調査中
