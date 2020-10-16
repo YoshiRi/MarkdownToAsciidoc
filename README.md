@@ -14,8 +14,11 @@ Downloaded from `https://www.dropbox.com/s/4z6kot27jmikhx5/forapp-markdown-sampl
 ## Pandoc Command
 
 
+`--to asciidoctor`が肝要だと思われる。なお，v1.9.11では動かなかった。
+
+
 ```
-pandoc -o sample_pandoc.adoc sample.md
+pandoc sample.md --to asciidoctor -o sample_pandoc.adoc --shift-heading-level-by=-1
 ```
 
 ## Docker-Asciidoctor Command
