@@ -135,6 +135,91 @@ body { display: none; } /* バッククォート囲みcss */
 バッククォート1個ずつで囲むとインラインのコード（`<code></code>`）です。`body { visibility: hidden;
 }`
 
+== 画像
+
+image::http://mkb.salchu.net/image/salchu_image02.jpg[うきっ！]
+
+== table
+
+[cols="<,>,^"]
+|===
+| Left align | Right align | Center align
+
+| This
+| This
+| This
+
+| column
+| column
+| column
+
+| will
+| will
+| will
+
+| be
+| be
+| be
+
+| left
+| right
+| center
+
+| aligned
+| aligned
+| aligned
+|===
+
+（Kobitoのヘルプmdから拝借しました）
+
+= GFM
+
 == リンク
 
-markdownでテキストリンク http://wired.jp/[WIRED.jp]+++<カッコ>+++でくくってリンク <http://wired.jp/> 定義参照リンクです。SNSには [Twitter] [1] や [Facebook] [2] や [Google+] [3] などがあります。 [1]: https://twitter.com/ "Twitter" [2]: https://ja-jp.facebook.com/ "Facebook" [3]: https://plus.google.com/ "Google+" ## 画像 ![うきっ！](http://mkb.salchu.net/image/salchu_image02.jpg "salchu_image02.jpg") ## table | Left align | Right align | Center align | |:-----------|------------:|:------------:| | This | This | This | | column | column | column | | will | will | will | | be | be | be | | left | right | center | | aligned | aligned | aligned | （Kobitoのヘルプmdから拝借しました） # GFM ## リンク URLそのまま貼り付け http://wired.jp/ ## 段落中の改行 ここは段落です。 ↑returnで改行しています。 ♪もーもたろさん もーもたーろさん おっこしーにつっけたーちー○○ー○○ー ## コードブロック バッククォートの開始囲みに続けて拡張子でシンタックスハイライト ```html <!DOCTYPE html> +++<head>++++++<meta http-equiv="X-UA-Compatible" content="IE=edge">++++++</meta>++++++<title>+++バッククォート囲みに拡張子付きhtml+++</title>++++++<s>+++sタグです。+++</s>++++++</head>++++++</カッコ>+++
+URLそのまま貼り付け http://wired.jp/
+
+== 段落中の改行
+
+ここは段落です。 ↑returnで改行しています。 ♪もーもたろさん もーもたーろさん おっこしーにつっけたーちー○○ー○○ー
+
+== コードブロック
+
+バッククォートの開始囲みに続けて拡張子でシンタックスハイライト
+
+[source,html]
+----
+<!DOCTYPE html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>バッククォート囲みに拡張子付きhtml</title>
+/* コメント */
+----
+
+[source,css]
+----
+body { display: none; } /* コメント */
+----
+
+== 取り消し線
+
+[.line-through]#取り消し線（GFM記法）#+++<s>+++sタグです。+++</s>+++
+
+== 単語中のアンダースコアの無効
+
+GitHub_Flavored_Markdown_test_test
+
+== tasklist
+
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++task1
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++task2
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked">++++++</input>+++completed task
+
+'''
+
+from http://qiita.com/salchu/items/da81122ed50b35feda4d[Markdown記法 表示確認用サンプル - Qiita]
+
+= おまけ
+
+== リンク（バグがあるため最終章に）
+
+markdownでテキストリンク http://wired.jp/[WIRED.jp]+++<カッコ>+++でくくってリンク <http://wired.jp/> 定義参照リンクです。SNSには [Twitter] [1] や [Facebook] [2] や [Google+] [3] などがあります。 [1]: https://twitter.com/ "Twitter" [2]: https://ja-jp.facebook.com/ "Facebook" [3]: https://plus.google.com/ "Google+" ++++</カッコ>+++

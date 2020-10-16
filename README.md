@@ -7,7 +7,7 @@ Also see [Here](https://matthewsetter.com/technical-documentation/asciidoc/conve
 
 Downloaded from `https://www.dropbox.com/s/4z6kot27jmikhx5/forapp-markdown-sample.md`.
 
-
+エラーを起こしそうな部分や冗長な箇所は取り除いた。
 
 ## Pandoc Command
 
@@ -39,14 +39,14 @@ wsl docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciido
 
 ## PHPのシンタックスハイライトをつけようとするとエラーが出る
 
-xmlのコメントを変換する機能でエラーがでる。
+xmlのコメントを変換する機能でエラーがでる。以下がそのエラー文。
 
 ```
 /usr/lib/ruby/gems/2.7.0/gems/kramdown-asciidoc-1.0.1/lib/kramdown-asciidoc/converter.rb:99:in `convert': undefined method `convert_xml_pi' for #<Kramdown::AsciiDoc::Converter:0x0000561a13adec28> (NoMethodError)
 Did you mean?  convert_li
 ```
 
-以下が原因となった部分
+デバッグの結果以下が原因となった部分。
 
 ```php
 <?php if (is_tag()){ $posts = query_posts($query_string . '&showposts=20'); } ?>
@@ -56,4 +56,7 @@ Did you mean?  convert_li
 
 ## リンク以降の改行がおかしい
 
-調査中
+- 定義参照リンク以降の変換がバグる。
+  - 定義参照リンクは別口で書くなどして対応するしか？
+
+![](linkbug.png)

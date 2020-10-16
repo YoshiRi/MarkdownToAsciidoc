@@ -448,25 +448,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>[[見出し1h1-1]]
-見出し1（h1）</pre>
-</div>
-</div>
-<div id="見出し2h2" class="paragraph">
-<p>見出し2（h2)
-<sub>~</sub><sub>~</sub><sub>~</sub><sub>~</sub></p>
-</div>
-<div id="見出し2h2-1" class="paragraph">
-<p>見出し2（h2）
-<sub>~</sub><sub>~</sub><sub>~</sub><sub>~</sub>~</p>
-</div>
-<div id="見出し3" class="paragraph">
-<p>見出し3
-<sup>^</sup><sup>^</sup>^</p>
-</div>
-<div id="見出し4" class="paragraph">
-<p>見出し4</p>
-</div>
+<pre>[[見出し2h2]]
+見出し2（h2)
+~~~~~~~~~~~~
+
+[[見出し3]]
+見出し3
+^^^^^^^
+
+[[見出し4]]
+見出し4
++++++++
+
 [[見出し5]]
 見出し5
 
@@ -483,10 +476,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 ♪もーもたろさん もーもたーろさん おっこしーにつっけたーちーんあーなごー
 
 * *強い強調（strong）です。* *これも強い強調です。*
-`<strong>`strongタグです。`</strong>`
-* _強調（em）です。_ _これも強調です。_ 斜体の`<em>`タグになります。
+`&lt;strong&gt;`strongタグです。`&lt;/strong&gt;`
+* _強調（em）です。_ _これも強調です。_ 斜体の`&lt;em&gt;`タグになります。
 * *_強調斜体です。_* *_強調斜体です。_*
-`<strong>`＋`<em>`タグになります。
+`&lt;strong&gt;`＋`&lt;em&gt;`タグになります。
 
 ______________________
 引用（Blockquote）です
@@ -524,12 +517,12 @@ ______________
 
 ## 見出しハッシュ文字をエスケープ
 
-HTMLタグをバックスラッシュでエスケープ→（<p>）
+HTMLタグをバックスラッシュでエスケープ→（&lt;p&gt;）
 
-HTMLをバッククォートでインラインコード→（`<p>`）
+HTMLをバッククォートでインラインコード→（`&lt;p&gt;`）
 
 [[水平線hr各種]]
-水平線（`<hr>`）各種
+水平線（`&lt;hr&gt;`）各種
 ~~~~~~~~~~~~~~~~~~~~
 
 アスタリスク3個半角スペース空けて
@@ -591,18 +584,18 @@ testtest // コメント
 ....
 
 ....
-<!DOCTYPE html>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>ニョロニョロ囲みhtml</title>
+&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;title&gt;ニョロニョロ囲みhtml&lt;/title&gt;
 /* コメント */
 ....
 
 ....
-<!DOCTYPE html>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>バッククォート囲みhtml</title>
+&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;title&gt;バッククォート囲みhtml&lt;/title&gt;
 ....
 
 ....
@@ -612,22 +605,10 @@ body { display: none; } /* バッククォート囲みcss */
 
 ....
 // 先頭に半角スペース4つでcode囲い
-<?php if (is_tag()){ $posts = query_posts($query_string . '&showposts=20'); } ?>
+&lt;?php if (is_tag()){ $posts = query_posts($query_string . '&amp;showposts=20'); } ?&gt;
 ....
 
-バッククォート1個ずつで囲むとインラインのコード（`<code></code>`）です。`body { visibility: hidden; }`
-
-[[リンク]]
-リンク
-~~~~~~
-
-markdownでテキストリンク http://wired.jp/[WIRED.jp]
-
-でくくってリンク http://wired.jp/
-
-定義参照リンクです。SNSには https://twitter.com/[Twitter] や
-https://ja-jp.facebook.com/[Facebook] や
-https://plus.google.com/[Google+] などがあります。
+バッククォート1個ずつで囲むとインラインのコード（`&lt;code&gt;&lt;/code&gt;`）です。`body { visibility: hidden; }`
 
 [[画像]]
 画像
@@ -639,7 +620,7 @@ image:http://mkb.salchu.net/image/salchu_image02.jpg[うきっ！,title="salchu_
 table
 ~~~~~
 
-[cols="<,>,^",options="header",]
+[cols="&lt;,&gt;,^",options="header",]
 |=====================================
 |Left align |Right align |Center align
 |This |This |This
@@ -656,7 +637,7 @@ table
 GFM
 ---
 
-[[リンク-1]]
+[[リンク]]
 リンク
 ~~~~~~
 
@@ -677,21 +658,16 @@ URLそのまま貼り付け http://wired.jp/
 
 [source,html]
 ----
-<!DOCTYPE html>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>バッククォート囲みに拡張子付きhtml</title>
+&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;title&gt;バッククォート囲みに拡張子付きhtml&lt;/title&gt;
 /* コメント */
 ----
 
 [source,css]
 ----
 body { display: none; } /* コメント */
-----
-
-[source,php]
-----
-<?php if (is_tag()){ $posts = query_posts($query_string . '&showposts=20'); } ?>
 ----
 
 [[取り消し線]]
@@ -719,10 +695,28 @@ tasklist
 
 from http://qiita.com/salchu/items/da81122ed50b35feda4d[Markdown記法
 表示確認用サンプル - Qiita]
+
+[[おまけ]]
+おまけ
+------
+
+[[リンクバグがあるため最終章に]]
+リンク（バグがあるため最終章に）
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+markdownでテキストリンク http://wired.jp/[WIRED.jp]
+
+でくくってリンク http://wired.jp/
+
+定義参照リンクです。SNSには https://twitter.com/[Twitter] や
+https://ja-jp.facebook.com/[Facebook] や
+https://plus.google.com/[Google+] などがあります。</pre>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-16 08:00:25 UTC
+Last updated 2020-10-16 08:51:08 UTC
 </div>
 </div>
 </body>

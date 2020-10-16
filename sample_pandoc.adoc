@@ -4,17 +4,9 @@ Markdown記法サンプル
 見出し1（h1）
 -------------
 
-[[見出し1h1-1]]
-見出し1（h1）
--------------
-
 [[見出し2h2]]
 見出し2（h2)
 ~~~~~~~~~~~~
-
-[[見出し2h2-1]]
-見出し2（h2）
-~~~~~~~~~~~~~
 
 [[見出し3]]
 見出し3
@@ -174,18 +166,6 @@ body { display: none; } /* バッククォート囲みcss */
 
 バッククォート1個ずつで囲むとインラインのコード（`<code></code>`）です。`body { visibility: hidden; }`
 
-[[リンク]]
-リンク
-~~~~~~
-
-markdownでテキストリンク http://wired.jp/[WIRED.jp]
-
-でくくってリンク http://wired.jp/
-
-定義参照リンクです。SNSには https://twitter.com/[Twitter] や
-https://ja-jp.facebook.com/[Facebook] や
-https://plus.google.com/[Google+] などがあります。
-
 [[画像]]
 画像
 ~~~~
@@ -213,7 +193,7 @@ table
 GFM
 ---
 
-[[リンク-1]]
+[[リンク]]
 リンク
 ~~~~~~
 
@@ -246,11 +226,6 @@ URLそのまま貼り付け http://wired.jp/
 body { display: none; } /* コメント */
 ----
 
-[source,php]
-----
-<?php if (is_tag()){ $posts = query_posts($query_string . '&showposts=20'); } ?>
-----
-
 [[取り消し線]]
 取り消し線
 ~~~~~~~~~~
@@ -276,3 +251,19 @@ tasklist
 
 from http://qiita.com/salchu/items/da81122ed50b35feda4d[Markdown記法
 表示確認用サンプル - Qiita]
+
+[[おまけ]]
+おまけ
+------
+
+[[リンクバグがあるため最終章に]]
+リンク（バグがあるため最終章に）
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+markdownでテキストリンク http://wired.jp/[WIRED.jp]
+
+でくくってリンク http://wired.jp/
+
+定義参照リンクです。SNSには https://twitter.com/[Twitter] や
+https://ja-jp.facebook.com/[Facebook] や
+https://plus.google.com/[Google+] などがあります。

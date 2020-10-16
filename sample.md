@@ -126,18 +126,6 @@ body { display: none; } /* バッククォート囲みcss */
 
 バッククォート1個ずつで囲むとインラインのコード（`<code></code>`）です。`body { visibility: hidden; }`
 
-## リンク
-
-markdownでテキストリンク [WIRED.jp](http://wired.jp/ "WIRED.jp")
-
-<カッコ>でくくってリンク <http://wired.jp/>
-
-定義参照リンクです。SNSには [Twitter] [1] や [Facebook] [2] や [Google+] [3]  などがあります。
-
-  [1]: https://twitter.com/        "Twitter"
-  [2]: https://ja-jp.facebook.com/  "Facebook"
-  [3]: https://plus.google.com/    "Google+"
-
 
 
 ## 画像
@@ -156,6 +144,8 @@ markdownでテキストリンク [WIRED.jp](http://wired.jp/ "WIRED.jp")
 | aligned    |     aligned |   aligned    |
 
 （Kobitoのヘルプmdから拝借しました）
+
+
 
 # GFM
 
@@ -205,3 +195,20 @@ GitHub_Flavored_Markdown_test_test
 ---
 
 from [Markdown記法 表示確認用サンプル - Qiita](http://qiita.com/salchu/items/da81122ed50b35feda4d "Markdown記法 表示確認用サンプル - Qiita")
+
+# おまけ
+
+## リンク（バグがあるため最終章に）
+
+markdownでテキストリンク [WIRED.jp](http://wired.jp/ "WIRED.jp")
+
+<カッコ>でくくってリンク <http://wired.jp/>
+
+
+定義参照リンクです。SNSには [Twitter] [1] や [Facebook] [2] や [Google+] [3]  などがあります。
+
+  [1]: https://twitter.com/        "Twitter"
+  [2]: https://ja-jp.facebook.com/  "Facebook" 
+  [3]: https://plus.google.com/    "Google+"
+
+<br>
