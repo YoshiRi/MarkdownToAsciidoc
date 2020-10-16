@@ -1,0 +1,32 @@
+= MarkdownToAsciidoc
+
+Test project for markdown to asciidoc conversion
+
+== Sample markdown
+
+Downloaded from `+https://www.dropbox.com/s/4z6kot27jmikhx5/forapp-markdown-sample.md+`.
+
+== Pandoc Command
+
+* To see in html
+
+----
+wsl docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor sample_pandoc.md
+----
+
+== Docker-Asciidoctor Command
+
+----
+wsl docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor kramdoc sample.md
+----
+
+== adoc to html command
+
+* option
+ ** left toc
+ ** data-uri
+ ** asciidoctor-diagram
+
+----
+wsl docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor <sample.adoc> -r asciidoctor-diagram -a allow-uri-read -a data-uri -a toc=left
+----
