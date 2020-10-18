@@ -20,9 +20,9 @@ Markdown記法サンプル
 ↑半角スペース2個で強制改行しています。  
 ♪もーもたろさん もーもたーろさん おっこしーにつっけたーちーんあーなごー
 
-- **強い強調（strong）です。** __これも強い強調です。__ `<strong>`strongタグです。`</strong>`
-- *強調（em）です。* _これも強調です。_ 斜体の`<em>`タグになります。
-- ***強調斜体です。*** ___強調斜体です。___ `<strong>`＋`<em>`タグになります。
+- **強い強調（strong）です。** __これも強い強調です。__ `<strong>` strongタグです。 `</strong>`
+- *強調（em）です。* _これも強調です。_ 斜体の `<em>` タグになります。
+- ***強調斜体です。*** ___強調斜体です。___ `<strong>` ＋ `<em>` タグになります。
 
 
 > 引用（Blockquote）です
@@ -202,10 +202,10 @@ from [Markdown記法 表示確認用サンプル - Qiita](http://qiita.com/salch
 
 markdownでテキストリンク [WIRED.jp](http://wired.jp/ "WIRED.jp")
 
-<カッコ>でくくってリンク <http://wired.jp/>
+\<カッコ\>でくくってリンク <http://wired.jp/>
 
 
-定義参照リンクです。SNSには [Twitter] [1] や [Facebook] [2] や [Google+] [3]  などがあります。
+定義参照リンクです。SNSには [Twitter][1] や [Facebook][2] や [Google+][3]  などがあります。
 
   [1]: https://twitter.com/        "Twitter"
   [2]: https://ja-jp.facebook.com/  "Facebook" 
