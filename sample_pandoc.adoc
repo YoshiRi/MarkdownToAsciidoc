@@ -10,6 +10,7 @@ Markdown記法サンプル
 
 ====== 見出し5
 
+======= 見出し6
 
 '''''
 
@@ -20,11 +21,11 @@ Markdown記法サンプル
 ↑半角スペース2個で強制改行しています。 +
 ♪もーもたろさん もーもたーろさん おっこしーにつっけたーちーんあーなごー
 
-* *強い強調（strong）です。* *これも強い強調です。*
-`+<strong>+`strongタグです。`+</strong>+`
-* _強調（em）です。_ _これも強調です。_ 斜体の`+<em>+`タグになります。
-* *_強調斜体です。_* *_強調斜体です。_*
-`+<strong>+`＋`+<em>+`タグになります。
+* *強い強調（strong）です。* *これも強い強調です。* `+<strong>+`
+strongタグです。 `+</strong>+`
+* _強調（em）です。_ _これも強調です。_ 斜体の `+<em>+` タグになります。
+* *_強調斜体です。_* *_強調斜体です。_* `+<strong>+` ＋ `+<em>+`
+タグになります。
 
 ____
 引用（Blockquote）です
@@ -224,8 +225,8 @@ from http://qiita.com/salchu/items/da81122ed50b35feda4d[Markdown記法
 
 markdownでテキストリンク http://wired.jp/[WIRED.jp]
 
-でくくってリンク http://wired.jp/
+<カッコ>でくくってリンク http://wired.jp/
 
-定義参照リンクです。SNSには [Twitter] https://twitter.com/[1] や
-[Facebook] https://ja-jp.facebook.com/[2] や [Google+]
-https://plus.google.com/[3] などがあります。
+定義参照リンクです。SNSには https://twitter.com/[Twitter] や
+https://ja-jp.facebook.com/[Facebook] や
+https://plus.google.com/[Google+] などがあります。

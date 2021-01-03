@@ -21,7 +21,7 @@ PandocのイメージをDockerから落として来ることできれいに変�
 
 
 ```
-wsl docker run --rm -v $(pwd):/data pandoc/latex:2.10 sample.md --to asciidoctor -o sample_pandoc.adoc
+wsl docker run --rm -v $(pwd):/data pandoc/core:2.10 sample.md --to asciidoctor -o sample_pandoc.adoc
 ```
 
 
