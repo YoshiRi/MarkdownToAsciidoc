@@ -13,12 +13,19 @@ Downloaded from `https://www.dropbox.com/s/4z6kot27jmikhx5/forapp-markdown-sampl
 
 ## Pandoc Command
 
+### Docker with pandoc 2.10
 
+```
+wsl docker run --rm -v $(pwd):/data pandoc/latex:2.10 sample.md --to asciidoctor -o sample_pandoc.adoc --shift-heading-level-by=-1
+```
+
+
+### Old(Deprecated)
 `--to asciidoctor`が肝要だと思われる。なお，v1.9.11では動かなかった。
 
 
 ```
-pandoc sample.md --to asciidoctor -o sample_pandoc.adoc --shift-heading-level-by=-1
+pandoc sample.md --to asciidoctor -o sample_pandoc.adoc
 ```
 
 ## Docker-Asciidoctor Command
