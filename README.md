@@ -13,14 +13,19 @@ Downloaded from `https://www.dropbox.com/s/4z6kot27jmikhx5/forapp-markdown-sampl
 
 ## Pandoc Command
 
+Pandocのバージョンによって挙動が違うので注意
+
 ### Docker with pandoc 2.10
 
+PandocのイメージをDockerから落として来ることできれいに変換できる。
+
+
 ```
-wsl docker run --rm -v $(pwd):/data pandoc/latex:2.10 sample.md --to asciidoctor -o sample_pandoc.adoc --shift-heading-level-by=-1
+wsl docker run --rm -v $(pwd):/data pandoc/latex:2.10 sample.md --to asciidoctor -o sample_pandoc.adoc
 ```
 
 
-### Old(Deprecated)
+### Papndoc1.9 (Deprecated)
 `--to asciidoctor`が肝要だと思われる。なお，v1.9.11では動かなかった。
 
 
@@ -29,6 +34,7 @@ pandoc sample.md --to asciidoctor -o sample_pandoc.adoc
 ```
 
 ## Docker-Asciidoctor Command
+
 
 ```
 wsl docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor kramdoc  --wrap=ventilate --format=GFM sample.md
@@ -49,6 +55,14 @@ wsl docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciido
 # Known Problems
 
 試して判明したエラーや知見など。
+
+## Pandoc VS Kramdoc
+
+- PandocもKramdocもそれなりにきれいに変換する
+  - Pandocは意図せぬ改行が入ることがある？
+  - どちらかというと全般的にPandocのほうがきれいに変換できる。
+  - タスクリストはKramdocのほうがきれい，番号付きリストもKramdocに軍配があがるか？
+
 
 ## PHPのシンタックスハイライトをつけようとするとエラーが出る
 
